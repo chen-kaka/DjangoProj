@@ -97,3 +97,15 @@ ImportError: No module named context_processors
 解决方案:
 
 from django.views.decorators import csrf
+
+
+管理后台:
+
+1、创建超级用户:
+
+python manage.py createsuperuser
+
+输入用户名密码
+本系统创建为: admin / admin123
+
+2、
