@@ -16,8 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from DjangoProj.view import hello
+from DjangoProj.testdb import testdb,testdbList,testdbUpdate,testdbDelete
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'hello/$', hello),
+    url(r'^testdb/$', testdb),
+    url(r'^testdb_list/$', testdbList),
+    url(r'^testdb_update/$', testdbUpdate),
+    url(r'^testdb_delete/$', testdbDelete),
 ]

@@ -61,3 +61,27 @@ python manage.py migrate
 注意:syncdb is deprecated because of the migration system.
 在Django 1.9及未来的版本种使用migrate代替syscdb.
 
+新的表没有创建:
+
+(1146, "Table 'test.testmodel_test' doesn't exist")
+
+重新运行:python manage.py migrate 报错:
+Your models have changes that are not yet reflected in a migration, and so won't be applied.
+
+Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+
+重新执行两行命令:
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+数据创建成功:
+Operations to perform:
+  Apply all migrations: TestModel, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying TestModel.0001_initial... OK
+
+重新运行服务:
+
+数据添加成功！
