@@ -30,3 +30,34 @@ DjangoProj/urls.py: 该 Django 项目的 URL 声明; 一份由 Django 驱动的�
 
 DjangoProj/wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。
 
+
+
+添加model:
+
+python manage.py startapp TestModel
+
+
+
+安装MySQL-python:
+
+vi ~/.bash_profile
+
+然后添加:
+
+export PATH=${PATH}:/usr/local/mysql/bin
+
+使更改生效:
+
+source ~/.bash_profile
+
+install MySQL-python
+
+sudo pip install MySQL-python
+
+创建数据库:
+
+python manage.py migrate
+
+注意:syncdb is deprecated because of the migration system.
+在Django 1.9及未来的版本种使用migrate代替syscdb.
+
