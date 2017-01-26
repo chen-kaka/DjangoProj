@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from DjangoProj.view import hello
 from DjangoProj.testdb import testdb,testdbList,testdbUpdate,testdbDelete
+from DjangoProj import search
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,4 +26,7 @@ urlpatterns = [
     url(r'^testdb_list/$', testdbList),
     url(r'^testdb_update/$', testdbUpdate),
     url(r'^testdb_delete/$', testdbDelete),
+    url(r'^search-form/$', search.search_form),
+    url(r'^search/$', search.search),
+    url(r'^search-post/$', search.search_post),
 ]

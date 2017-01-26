@@ -85,3 +85,15 @@ Running migrations:
 重新运行服务:
 
 数据添加成功！
+
+
+引入:
+from django.core.context_processors import csrf
+
+报错:
+
+ImportError: No module named context_processors
+
+解决方案:
+
+from django.views.decorators import csrf
