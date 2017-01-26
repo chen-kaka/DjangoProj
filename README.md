@@ -108,4 +108,14 @@ python manage.py createsuperuser
 输入用户名密码
 本系统创建为: admin / admin123
 
-2、
+2、访问:
+http://127.0.0.1:8000/admin/
+
+uwsgi:
+
+1、uwsgi --http :8001 --wsgi-file test.py
+
+2、配置nginx
+
+3、uwsgi --ini /etc/uwsgi9090.ini &
+  /usr/local/nginx/sbin/nginx
